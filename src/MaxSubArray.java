@@ -65,7 +65,7 @@ public class MaxSubArray {
 
     }
 
-    public static void main() {
+    static void main() {
         MaxSubArray obj = new MaxSubArray();
         int ans = obj.maxSubArray(new int[]{2, 3, 5, -2, 7, -4});
         int ans2 = obj.maxSubArray2(new int[]{2, 3, 5, -2, 7, -4});
