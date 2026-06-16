@@ -1,0 +1,26 @@
+public class MinInRotatedSortedArray {
+
+    public static int findMin(int[] nums) {
+        if(nums.length == 0){
+            return -1;
+        }
+
+        int start = 0;
+        int end = nums.length -1;
+        while(start < end){
+            int mid = start + (end-start)/2;
+            if(nums[mid] > nums[end])
+            {
+                start = mid+1;
+            }
+            else{
+                end = mid;
+            }
+        }
+        return nums[start];
+    }
+
+    static void main() {
+        System.out.println(findMin(new int[]{4,5,6,0,1,2,3}));
+    }
+}
